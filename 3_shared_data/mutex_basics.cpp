@@ -1,11 +1,11 @@
 #include <thread>
-#include <mutex>
+#include <mutex>  // scoped_lock
 #include <iostream>
 #include <functional>  // for std::ref
 #include <array>
 
 void f_lock_guard_version(int number, std::mutex& mutex) {
-    std::lock_guard<std::mutex> lg {mutex};
+    std::scoped_lock guard{mutex}; // or use std::lock_guard (older)
     std::cout << "In thread: " << std::this_thread::get_id() << "\n"
         << "t num: " << number << "\n";
 }
