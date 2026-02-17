@@ -12,3 +12,5 @@ Reading the book C++ Concurrency in Action 2nd Edition and practicing the gained
 | **`std::unique_lock`** | C++11 | ✅ Yes | **Flexible**: Can be deferred, unlocked early, moved, and adopted. Required for `std::condition_variable`. | Complex logic, manual unlocking, transferring ownership, or waiting on condition variables. |
 | **`std::shared_lock`** | C++14 | ✅ Yes | **Shared Ownership**: Allows multiple threads to hold the lock (Reader lock). | Use with `std::shared_mutex` for **Readers** in a Read-Write scenario. |
 | **`std::lock_guard`** | C++11 | ❌ No | **Simple RAII**: Strictly scope-bound. Cannot be moved or unlocked early. | **Legacy Default**. Use only if stuck on C++11/14 (otherwise `scoped_lock` is superior). |
+
+`g++ -std=c++23 -pthread <file>`
