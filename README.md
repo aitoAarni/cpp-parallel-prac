@@ -5,7 +5,7 @@ Reading the book C++ Concurrency in Action 2nd Edition and practicing the gained
 `g++ -std=c++23 -pthread <file>`
 
 
-### 3 Sharing data between threads
+### Chapter 3: Sharing data between threads
 
 | Wrapper | Standard | Member Functions (`lock`, `unlock`, etc.) | Key Features | Best Use Case |
 | :--- | :---: | :---: | :--- | :--- |
